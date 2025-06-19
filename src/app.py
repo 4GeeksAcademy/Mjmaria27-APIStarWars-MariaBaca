@@ -11,7 +11,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db.init_app(app)
 Migrate(app, db)
-setup_admin(app)  # ✅ Activa el panel de administración
+setup_admin(app)  
 
 # --- RUTAS DE LA API ---
 
@@ -98,4 +98,4 @@ def delete_people_favorite(people_id):
 # --- REDIRECCIÓN DE INICIO AL ADMIN ---
 @app.route('/')
 def home():
-    return redirect('/admin')  # ✅ Redirige automáticamente al panel de administración
+    return redirect('/admin')  
